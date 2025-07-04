@@ -4,14 +4,17 @@ Landing page para o programa de independência digital desenvolvido especialment
 
 ## Como executar localmente
 
-1. Abra o arquivo `index.html` diretamente no navegador
-2. Ou use um servidor local: `npx serve .`
+1. Abra o arquivo `public/index.html` diretamente no navegador
+2. Ou use um servidor local: `npm start`
 
-## Deploy
+## Deploy no Vercel
 
-Este projeto está configurado para deploy automático no Vercel.
+Este projeto está configurado para deploy automático no Vercel com:
+- Pasta de output: `public/`
+- Build command: `npm run build`
 
 ## Estrutura
 
-- `index.html` - Página principal
+- `public/index.html` - Página principal
 - `package.json` - Configurações do projeto
+- `vercel.json` - Configurações do Vercel
