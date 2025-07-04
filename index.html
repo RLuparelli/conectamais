@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vida Digital Segura 50+ | Programa Completo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #4a5568;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .stat-label {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        /* Problem Section */
+        .problem {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .problem h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #2d3748;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .problem-card {
+            background: #f8f9ff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .problem-card h3 {
+            color: #e53e3e;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        .problem-card p {
+            color: #4a5568;
+            line-height: 1.8;
+        }
+
+        /* Solution Section */
+        .solution {
+            background: linear-gradient(135deg, #4299e1 0%, #667eea 100%);
+            padding: 80px 0;
+            color: white;
+        }
+
+        .solution h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .solution-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .solution-text {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .solution-features {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: #48bb78;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 1.5em;
+        }
+
+        /* Curriculum Section */
+        .curriculum {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .curriculum h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #2d3748;
+        }
+
+        .weeks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .week-card {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-left: 5px solid #4299e1;
+        }
+
+        .week-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .week-number {
+            background: #4299e1;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .week-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+
+        .week-content {
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        .week-topics {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .week-topics li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .week-topics li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #48bb78;
+            font-weight: bold;
+        }
+
+        /* Architecture Section */
+        .architecture {
+            background: #f8f9ff;
+            padding: 80px 0;
+        }
+
+        .architecture h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #2d3748;
+        }
+
+        .arch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .arch-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .arch-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .arch-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2em;
+            color: white;
+        }
+
+        .arch-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 0;
+            color: white;
+        }
+
+        .testimonials h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #ffd700;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            background: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #2d3748;
+        }
+
+        .final-cta p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            color: #4a5568;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button-large {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button-large:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .solution-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .weeks-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .arch-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">🔐 Vida Digital Segura 50+</div>
+                <a href="#inscricao" class="cta-button">Quero Participar</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Programa de Independência Digital com Proteção Garantida</h1>
+            <p>Desenvolvido especialmente para quem tem mais de 50 anos e quer dominar a tecnologia no seu próprio ritmo, com segurança total e suporte humanizado.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Semanas de Aprendizado</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Proteção Anti-Golpe</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Suporte Humanizado</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2>Você Se Sente Assim?</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>🔒 Medo de Ser Enganado</h3>
+                    <p>Terror de cair em golpes do WhatsApp, PIX ou sites falsos. Cada operação digital parece uma armadilha esperando para roubar suas economias.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>😔 Dependência Humilhante</h3>
+                    <p>Precisar pedir ajuda para tarefas simples no celular, vendo a impaciência disfarçada dos filhos e netos quando você pergunta "de novo".</p>
+                </div>
+                <div class="problem-card">
+                    <h3>🚫 Exclusão do Mundo Moderno</h3>
+                    <p>Não conseguir fazer operações bancárias, compras online ou usar apps essenciais. Sentir-se um estranho no próprio mundo.</p>
+                </div>
+                <div class="problem-card">
+                    <h3>😨 Pavor de "Estragar" Tudo</h3>
+                    <p>Medo paralisante de apertar o botão errado e perder todas as fotos, contatos ou dinheiro. Ansiedade constante ao usar tecnologia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <h2>A Solução que Você Estava Esperando</h2>
+            <div class="solution-content">
+                <div class="solution-text">
+                    <p>Imagine surpreender sua família fazendo uma videochamada sozinho, comprando passagens online ou gerenciando seus investimentos pelo celular com total segurança.</p>
+                    <p>O <strong>Vida Digital Segura 50+</strong> é o primeiro programa que combina ensino de tecnologia com proteção total contra golpes, criado especificamente para pessoas como você.</p>
+                    <p>Nosso método gentil e respeitoso reconhece sua experiência de vida e ensina no seu ritmo, sem pressa, sem termos técnicos, sem julgamentos.</p>
+                </div>
+                <div class="solution-features">
+                    <div class="feature">
+                        <div class="feature-icon">🛡️</div>
+                        <span>Proteção Anti-Golpe Integrada</span>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🕒</div>
+                        <span>Aprenda no Seu Próprio Ritmo</span>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">👥</div>
+                        <span>Suporte Humanizado 24/7</span>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🎯</div>
+                        <span>Método Específico para 50+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum Section -->
+    <section class="curriculum">
+        <div class="container">
+            <h2>Cronograma de 8 Semanas</h2>
+            <div class="weeks-grid">
+                <div class="week-card">
+                    <div class="week-number">1</div>
+                    <div class="week-title">Primeiros Passos Seguros</div>
+                    <div class="week-content">
+                        <p>Conhecendo seu smartphone sem medo de errar</p>
+                        <ul class="week-topics">
+                            <li>Configuração inicial segura</li>
+                            <li>Criando senhas fortes e memoráveis</li>
+                            <li>Reconhecendo apps confiáveis</li>
+                            <li>Backup automático de fotos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="week-card">
+                    <div class="week-number">2</div>
+                    <div class="week-title">WhatsApp Seguro e Eficiente</div>
+                    <div class="week-content">
+                        <p>Dominando o WhatsApp com proteção total</p>
+                        <ul class="week-topics">
+                            <li>Configurações de privacidade</li>
+                            <li>Identificando mensagens suspeitas</li>
+                            <li>Grupos familiares organizados</li>
+                            <li>Videochamadas de qualidade</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="week-card">
+                    <div class="week-number">3</div>
+                    <div class="week-title">Banco Digital Blindado</div>
+                    <div class="week-content">
+                        <p>Apps bancários com segurança máxima</p>
+                        <ul class="week-topics">
+                            <li>Instalação e configuração segura</li>
+                            <li>PIX protegido contra golpes</li>
+                            <li>Consultas e extratos</li>
+                            <li>Investimentos pelo celular</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="week-card">
+                    <div class="week-number">4</div>
+                    <div class="week-title">Compras Online Inteligentes</div>
+                    <div class="week-content">
+                        <p>Comprando online com segurança e economia</p>
+                        <ul class="week-topics">
+                            <li>Sites confiáveis vs. golpes</li>
+                            <li>Comparação de preços</li>
+                            <li>Cupons e promoções legítimas</li>
+                            <li>Rastreamento de entregas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="week-card">
+                    <div class="week-number">5</div>
+                    <div class="week-title">Aplicativos do Dia a Dia</div>
+                    <div class="week-content">
+                        <p>Apps úteis para facilitar sua vida</p>
+                        <ul class="week-topics">
+                            <li>Uber/99 com segurança</li>
+                            <li>iFood e delivery</li>
+                            <li>Previsão do tempo</li>
+                            <li>Mapas e GPS</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="week-card">
+                    <div class="week-number">6</div>
+                    <div class="week-title">Saúde e Bem-Estar Digital</div>
+                    <div class="week-content">
+                        <p>Tecnologia a favor da sua saúde</p>
+                        <ul class="week-topics">
+                            <li>Telemedicina e consultas online</li>
+                            <li>Farmácias digitais</li>
+                            <li>Lembretes de medicamentos</li>
+                            <li>Emergências médicas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="week-card">
+                    <div class="week-number">7</div>
+                    <div class="week-title">Entretenimento e Conexões</div>
+                    <div class="week-content">
+                        <p>Se divertindo e conectando com família</p>
+                        <ul class="week-topics">
+                            <li>Netflix, YouTube e streaming</li>
+                            <li>Jogos relaxantes</li>
+                            <li>Redes sociais seguras</li>
+                            <li>Compartilhamento de memórias</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="week-card">
+                    <div class="week-number">8</div>
+                    <div class="week-title">Autonomia Total e Manutenção</div>
+                    <div class="week-content">
+                        <p>Tornando-se independente digitalmente</p>
+                        <ul class="week-topics">
+                            <li>Revisão de segurança completa</li>
+                            <li>Resolução de problemas</li>
+                            <li>Atualizações e backups</li>
+                            <li>Plano de manutenção contínua</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section class="architecture">
+        <div class="container">
+            <h2>Arquitetura do Programa</h2>
+            <div class="arch-grid">
+                <div class="arch-card">
+                    <div class="arch-icon">🎥</div>
+                    <div class="arch-title">Videoaulas Passo a Passo</div>
+                    <p>Instruções claras e pausadas, com repetições quantas vezes precisar</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-icon">📱</div>
+                    <div class="arch-title">Prática Guiada</div>
+                    <p>Exercícios práticos em ambiente seguro, sem risco de errar</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-icon">🛡️</div>
+                    <div class="arch-title">Simulador Anti-Golpe</div>
+                    <p>Treinamento para reconhecer e evitar tentativas de fraude</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-icon">👥</div>
+                    <div class="arch-title">Comunidade Segura</div>
+                    <p>Grupo exclusivo para tirar dúvidas e compartilhar experiências</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-icon">📞</div>
+                    <div class="arch-title">Suporte Humanizado</div>
+                    <p>Atendimento por telefone e WhatsApp com instrutores especializados</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-icon">📚</div>
+                    <div class="arch-title">Material Complementar</div>
+                    <p>Guias em PDF com letras grandes e linguagem simples</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>O Que Dizem Nossos Alunos</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Aos 67 anos, finalmente consegui fazer PIX sozinha! Meus filhos ficaram impressionados quando mostrei que sabia usar o app do banco."
+                    </div>
+                    <div class="testimonial-author">- Maria Santos, 67 anos</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Já não preciso mais pedir ajuda para os netos. Agora sou EU quem ajuda os vizinhos com tecnologia!"
+                    </div>
+                    <div class="testimonial-author">- João Silva, 72 anos</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "O melhor foi aprender a identificar golpes. Semana passada ajudei uma amiga a não cair numa tentativa de fraude."
+                    </div>
+                    <div class="testimonial-author">- Ana Oliveira, 63 anos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="inscricao">
+        <div class="container">
+            <h2>Sua Independência Digital Começa Hoje</h2>
+            <p>Não deixe para amanhã a liberdade que você pode ter hoje. Junte-se a centenas de pessoas que já recuperaram sua autonomia digital.</p>
+            <a href="#" class="cta-button-large">Quero Garantir Minha Vaga</a>
+            <p style="margin-top: 20px; font-size: 0.9em; color: #666;">
+                ✅ Garantia de 60 dias<br>
+                ✅ Suporte vitalício<br>
+                ✅ Acesso imediato
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add some interactive elements
+        const weekCards = document.querySelectorAll('.week-card');
+        weekCards.forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = 'scale(1.02)';
+                setTimeout(() => {
+                    this.style.transform = 'translateY(-5px)';
+                }, 200);
+            });
+        });
+    </script>
+</body>
+</html>

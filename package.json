@@ -1,0 +1,13 @@
+{
+  "name": "vida-digital-segura",
+  "version": "1.0.0",
+  "description": "Landing page para o programa Vida Digital Segura 50+",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Build completed'"
+  },
+  "keywords": ["landing-page", "html", "css", "javascript"],
+  "author": "Sua empresa",
+  "license": "MIT"
+}
