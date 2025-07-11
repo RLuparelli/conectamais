@@ -118,6 +118,32 @@ body {
   opacity: 0.9;
 }
 
+.hero-actions {
+  margin-top: 40px;
+}
+
+.cta-button-secondary {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+}
+
+.cta-button-secondary:hover {
+  background: white;
+  color: #ee5a24;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+}
+
 /* Problem Section */
 .problem {
   background: white;

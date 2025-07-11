@@ -1,0 +1,444 @@
+/* Simulados Specific Styles */
+
+.hero-simulados {
+    background: linear-gradient(135deg, #4ade80 0%, #16a34a 100%);
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-simulados h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-simulados p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Progress Indicator */
+.progress-indicator {
+    margin-top: 30px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.progress-bar {
+    background: rgba(255, 255, 255, 0.3);
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, #fbbf24, #f59e0b);
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s ease;
+    border-radius: 10px;
+}
+
+#progressText {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+/* Main Content */
+.simulados-content {
+    padding: 60px 0;
+}
+
+.simulados-content section {
+    margin-bottom: 80px;
+}
+
+.simulados-content h2 {
+    font-size: 2.2em;
+    color: #1f2937;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Aulas Grid */
+.aulas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.aula-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.aula-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.aula-card.completed {
+    border-color: #16a34a;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+.aula-card.active {
+    border-color: #3b82f6;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.aula-icon {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 20px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.aula-card h3 {
+    font-size: 1.4em;
+    color: #1f2937;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.aula-card p {
+    color: #6b7280;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.btn-aula {
+    background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.btn-aula:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+}
+
+.btn-aula:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.aula-status {
+    text-align: center;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+
+.aula-status.nao-iniciada {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.aula-status.em-progresso {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.aula-status.concluida {
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* Quiz Section */
+.quiz-section, .simulador-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    padding: 40px;
+    border-radius: 20px;
+    margin: 40px 0;
+}
+
+.quiz-card, .simulador-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.btn-quiz, .btn-simulador {
+    background: linear-gradient(45deg, #8b5cf6, #7c3aed);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-quiz:hover:not(:disabled), .btn-simulador:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
+}
+
+.btn-quiz:disabled, .btn-simulador:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Quiz Styles */
+.quiz-question {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border-left: 5px solid #3b82f6;
+}
+
+.quiz-question h3 {
+    color: #1f2937;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+}
+
+.quiz-options {
+    display: grid;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.quiz-option {
+    background: white;
+    border: 2px solid #e5e7eb;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.quiz-option:hover {
+    border-color: #3b82f6;
+    background: #eff6ff;
+}
+
+.quiz-option.selected {
+    border-color: #3b82f6;
+    background: #dbeafe;
+}
+
+.quiz-option.correct {
+    border-color: #16a34a;
+    background: #dcfce7;
+}
+
+.quiz-option.incorrect {
+    border-color: #dc2626;
+    background: #fef2f2;
+}
+
+/* Simulador Styles */
+.simulador-scenario {
+    background: #f8fafc;
+    border: 2px solid #e5e7eb;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.simulador-scenario.suspicious {
+    border-color: #dc2626;
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+}
+
+.simulador-scenario.safe {
+    border-color: #16a34a;
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+.scenario-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.scenario-icon {
+    font-size: 2em;
+    margin-right: 15px;
+}
+
+.scenario-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.scenario-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-scenario {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.btn-confiar {
+    background: #dc2626;
+    color: white;
+}
+
+.btn-desconfiar {
+    background: #16a34a;
+    color: white;
+}
+
+.btn-scenario:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Results */
+.resultado {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.resultado.acerto {
+    background: #dcfce7;
+    color: #166534;
+    border: 2px solid #16a34a;
+}
+
+.resultado.erro {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 2px solid #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-simulados h1 {
+        font-size: 2em;
+    }
+    
+    .aulas-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        margin: 10% auto;
+        width: 95%;
+        padding: 20px;
+    }
+    
+    .scenario-actions {
+        flex-direction: column;
+    }
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.aula-card.active {
+    animation: pulse 2s infinite;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content {
+    animation: slideIn 0.3s ease;
+}
