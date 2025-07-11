@@ -449,6 +449,29 @@ body {
   box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
 }
 
+.cta-button-large-hero {
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: white;
+  padding: 25px 50px;
+  border: none;
+  border-radius: 35px;
+  font-size: 1.4em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-button-large-hero:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(255, 107, 107, 0.5);
+  background: linear-gradient(45deg, #ee5a24, #ff6b6b);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero h1 {
