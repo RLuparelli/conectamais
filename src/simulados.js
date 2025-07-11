@@ -9,310 +9,214 @@ let progressoUsuario = {
 // Dados das aulas
 const aulas = {
     1: {
-        titulo: "Golpes Comuns e Golpe do Parente",
+        titulo: "Golpe do Parente - Como Identificar",
         conteudo: `
-            <h2>🚨 Aula 1: Golpes Comuns e Golpe do Parente</h2>
+            <h2>🚨 Golpe do Parente</h2>
             
             <div class="aula-content">
                 <div class="aula-section">
-                    <h3>O que são golpes digitais?</h3>
-                    <p>Golpes digitais são tentativas de enganar pessoas para roubar dinheiro, dados pessoais ou acesso a contas.</p>
+                    <h3>O Golpe:</h3>
+                    <p><strong>Alguém liga fingindo ser seu filho/neto pedindo dinheiro urgente.</strong></p>
                 </div>
 
                 <div class="aula-section">
-                    <h3>🔴 GOLPE DO PARENTE - O Mais Perigoso</h3>
+                    <h3>🔴 Sinais de Perigo:</h3>
                     <div class="exemplo-golpe">
-                        <h4>Como funciona:</h4>
-                        <ol>
-                            <li>Criminoso se passa por um parente ou amigo</li>
-                            <li>Inventa uma emergência (prisão, acidente, hospital)</li>
-                            <li>Pede dinheiro urgente via PIX</li>
-                            <li>Pressiona para agir rápido, sem pensar</li>
-                        </ol>
+                        <ul>
+                            <li><strong>Pressa:</strong> "É urgente, não posso explicar"</li>
+                            <li><strong>Emergência:</strong> "Estou no hospital/delegacia"</li>
+                            <li><strong>PIX:</strong> "Manda PIX para este número"</li>
+                            <li><strong>Segredo:</strong> "Não conta para ninguém"</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="aula-section">
-                    <h3>🛡️ Como se proteger:</h3>
-                    <ul class="lista-protecao">
-                        <li><strong>SEMPRE confirme:</strong> Ligue diretamente para o parente</li>
-                        <li><strong>Desconfie de pressa:</strong> Golpistas criam urgência falsa</li>
-                        <li><strong>Pergunte detalhes:</strong> Só parentes verdadeiros saberão</li>
-                        <li><strong>Jamais faça PIX</strong> sem confirmar a identidade</li>
-                    </ul>
-                </div>
-
-                <div class="aula-section">
-                    <h3>⚠️ Outros golpes comuns:</h3>
-                    <div class="golpes-lista">
-                        <div class="golpe-item">
-                            <strong>Falso Banco:</strong> Ligações pedindo dados bancários
-                        </div>
-                        <div class="golpe-item">
-                            <strong>Promoção Falsa:</strong> Prêmios que pedem taxa para retirar
-                        </div>
-                        <div class="golpe-item">
-                            <strong>App Falso:</strong> Aplicativos que copiam bancos verdadeiros
-                        </div>
+                    <h3>✅ Regra de Ouro:</h3>
+                    <div class="lista-protecao">
+                        <p><strong>SEMPRE DESLIGUE E LIGUE PARA O NÚMERO QUE VOCÊ TEM SALVO</strong></p>
+                        <p>Se for emergência real, seu parente vai atender.</p>
                     </div>
                 </div>
 
                 <div class="aula-quiz">
-                    <h3>📝 Mini-teste:</h3>
-                    <p>Uma pessoa liga dizendo ser seu neto, pedindo PIX para uma emergência. O que você faz?</p>
+                    <h3>📝 Teste Rápido:</h3>
+                    <p><strong>Alguém liga dizendo ser seu neto pedindo PIX urgente. O que fazer?</strong></p>
                     <div class="mini-opcoes">
-                        <button onclick="respostaMiniTeste(1, 'errado')">Envio o PIX imediatamente</button>
-                        <button onclick="respostaMiniTeste(1, 'certo')">Desligo e ligo para meu neto</button>
-                        <button onclick="respostaMiniTeste(1, 'errado')">Peço o número da conta</button>
+                        <button onclick="respostaMiniTeste(1, 'errado')">Fazer o PIX</button>
+                        <button onclick="respostaMiniTeste(1, 'certo')">Desligar e ligar para meu neto</button>
+                        <button onclick="respostaMiniTeste(1, 'errado')">Pedir mais detalhes</button>
                     </div>
                     <div id="resultado-mini-1"></div>
                 </div>
 
                 <div class="aula-footer">
-                    <button class="btn-concluir" onclick="concluirAula(1)">✅ Concluir Aula 1</button>
+                    <button class="btn-concluir" onclick="concluirAula(1)">✅ Entendi! Próxima Aula</button>
                 </div>
             </div>
         `
     },
     2: {
-        titulo: "Phishing por E-mail/SMS",
+        titulo: "E-mails e SMS Falsos",
         conteudo: `
-            <h2>📧 Aula 2: Phishing por E-mail/SMS</h2>
+            <h2>📧 E-mails e SMS Falsos</h2>
             
             <div class="aula-content">
                 <div class="aula-section">
-                    <h3>O que é Phishing?</h3>
-                    <p>Phishing é quando criminosos enviam e-mails ou SMS falsos, fingindo ser empresas conhecidas, para roubar suas informações.</p>
+                    <h3>O Golpe:</h3>
+                    <p><strong>Criminosos enviam e-mails/SMS fingindo ser seu banco.</strong></p>
                 </div>
 
                 <div class="aula-section">
-                    <h3>🔍 Sinais de E-mail Suspeito:</h3>
-                    <div class="sinais-phishing">
-                        <div class="sinal">
-                            <span class="emoji">⚠️</span>
-                            <div>
-                                <strong>Remetente Estranho:</strong><br>
-                                E-mail não oficial (ex: banco123@gmail.com)
-                            </div>
-                        </div>
-                        <div class="sinal">
-                            <span class="emoji">⏰</span>
-                            <div>
-                                <strong>Urgência Falsa:</strong><br>
-                                "Sua conta será bloqueada em 24h"
-                            </div>
-                        </div>
-                        <div class="sinal">
-                            <span class="emoji">🔗</span>
-                            <div>
-                                <strong>Links Suspeitos:</strong><br>
-                                URLs diferentes do site oficial
-                            </div>
-                        </div>
-                        <div class="sinal">
-                            <span class="emoji">📝</span>
-                            <div>
-                                <strong>Pedido de Dados:</strong><br>
-                                Solicita senha, CPF ou dados bancários
-                            </div>
-                        </div>
+                    <h3>🔴 Sinais de Perigo:</h3>
+                    <div class="exemplo-golpe">
+                        <ul>
+                            <li><strong>E-mail estranho:</strong> banco123@gmail.com</li>
+                            <li><strong>Urgência:</strong> "Conta será bloqueada hoje"</li>
+                            <li><strong>Link suspeito:</strong> www.banco-falso.com</li>
+                            <li><strong>Pede dados:</strong> senha, CPF, cartão</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="aula-section">
-                    <h3>📱 SMS de Phishing:</h3>
-                    <div class="exemplo-sms">
-                        <div class="sms-falso">
-                            <strong>Exemplo de SMS FALSO:</strong><br>
-                            "Seu cartão foi clonado! Clique aqui para bloquear: www.banco-falso.com"
-                        </div>
-                        <div class="sms-real">
-                            <strong>SMS VERDADEIRO seria:</strong><br>
-                            "Para dúvidas, ligue 0800-XXX-XXXX ou acesse seu app oficial"
-                        </div>
+                    <h3>✅ Regra de Ouro:</h3>
+                    <div class="lista-protecao">
+                        <p><strong>NUNCA CLIQUE EM LINKS DE E-MAIL OU SMS</strong></p>
+                        <p>Sempre vá direto ao app oficial do seu banco.</p>
                     </div>
-                </div>
-
-                <div class="aula-section">
-                    <h3>🛡️ Como se proteger:</h3>
-                    <ul class="lista-protecao">
-                        <li><strong>NUNCA clique</strong> em links suspeitos</li>
-                        <li><strong>Vá direto ao site oficial</strong> do banco/empresa</li>
-                        <li><strong>Ligue para o atendimento</strong> oficial para confirmar</li>
-                        <li><strong>Jamais digite dados</strong> em links de e-mail/SMS</li>
-                    </ul>
                 </div>
 
                 <div class="aula-quiz">
-                    <h3>📝 Mini-teste:</h3>
-                    <p>Você recebe um SMS: "Seu PIX foi bloqueado! Clique aqui para desbloquear". O que faz?</p>
+                    <h3>📝 Teste Rápido:</h3>
+                    <p><strong>SMS: "Seu PIX foi bloqueado! Clique aqui". O que fazer?</strong></p>
                     <div class="mini-opcoes">
-                        <button onclick="respostaMiniTeste(2, 'errado')">Clico no link</button>
-                        <button onclick="respostaMiniTeste(2, 'certo')">Ignoro e vou ao app do banco</button>
-                        <button onclick="respostaMiniTeste(2, 'errado')">Respondo o SMS</button>
+                        <button onclick="respostaMiniTeste(2, 'errado')">Clicar no link</button>
+                        <button onclick="respostaMiniTeste(2, 'certo')">Ignorar e abrir app do banco</button>
+                        <button onclick="respostaMiniTeste(2, 'errado')">Responder o SMS</button>
                     </div>
                     <div id="resultado-mini-2"></div>
                 </div>
 
                 <div class="aula-footer">
-                    <button class="btn-concluir" onclick="concluirAula(2)">✅ Concluir Aula 2</button>
+                    <button class="btn-concluir" onclick="concluirAula(2)">✅ Entendi! Próxima Aula</button>
                 </div>
             </div>
         `
     },
     3: {
-        titulo: "Autenticação em Dois Fatores",
+        titulo: "Dupla Proteção (2FA)",
         conteudo: `
-            <h2>🔐 Aula 3: Autenticação em Dois Fatores</h2>
+            <h2>🔐 Dupla Proteção</h2>
             
             <div class="aula-content">
                 <div class="aula-section">
-                    <h3>O que é Autenticação em Dois Fatores (2FA)?</h3>
-                    <p>É uma camada extra de segurança que exige duas formas de confirmar sua identidade antes de acessar suas contas.</p>
+                    <h3>O que é:</h3>
+                    <p><strong>É usar DUAS proteções para entrar na sua conta do banco.</strong></p>
                 </div>
 
                 <div class="aula-section">
-                    <h3>🔒 Como funciona:</h3>
-                    <div class="passos-2fa">
-                        <div class="passo">
-                            <span class="numero">1</span>
-                            <div>
-                                <strong>Primeiro Fator:</strong><br>
-                                Sua senha normal
-                            </div>
-                        </div>
-                        <div class="passo">
-                            <span class="numero">2</span>
-                            <div>
-                                <strong>Segundo Fator:</strong><br>
-                                Código no celular, biometria ou token
-                            </div>
-                        </div>
+                    <h3>🔒 Como Funciona:</h3>
+                    <div class="exemplo-golpe">
+                        <p><strong>1º)</strong> Você digita sua senha</p>
+                        <p><strong>2º)</strong> Banco envia código no seu celular</p>
+                        <p><strong>Só assim você consegue entrar!</strong></p>
                     </div>
                 </div>
 
                 <div class="aula-section">
-                    <h3>📱 Tipos de Segundo Fator:</h3>
-                    <div class="tipos-2fa">
-                        <div class="tipo">
-                            <span class="emoji">💬</span>
-                            <div>
-                                <strong>SMS:</strong><br>
-                                Código enviado por mensagem
-                            </div>
-                        </div>
-                        <div class="tipo">
-                            <span class="emoji">📱</span>
-                            <div>
-                                <strong>App Autenticador:</strong><br>
-                                Google Authenticator, etc.
-                            </div>
-                        </div>
-                        <div class="tipo">
-                            <span class="emoji">👆</span>
-                            <div>
-                                <strong>Biometria:</strong><br>
-                                Digital ou reconhecimento facial
-                            </div>
-                        </div>
+                    <h3>✅ Por que é Importante:</h3>
+                    <div class="lista-protecao">
+                        <p><strong>MESMO SE ALGUÉM DESCOBRIR SUA SENHA, NÃO CONSEGUE ENTRAR</strong></p>
+                        <p>Porque não tem acesso ao seu celular!</p>
                     </div>
                 </div>
 
                 <div class="aula-section">
-                    <h3>⚙️ Como ativar no seu banco:</h3>
-                    <ol class="passos-ativacao">
-                        <li>Entre no app do seu banco</li>
-                        <li>Vá em "Configurações" ou "Segurança"</li>
-                        <li>Procure "Autenticação em dois fatores" ou "2FA"</li>
-                        <li>Escolha SMS ou biometria</li>
-                        <li>Siga as instruções na tela</li>
-                    </ol>
-                </div>
-
-                <div class="aula-section">
-                    <h3>✅ Benefícios:</h3>
-                    <ul class="lista-protecao">
-                        <li><strong>Proteção extra:</strong> Mesmo com senha vazada, conta fica segura</li>
-                        <li><strong>Alerta de invasão:</strong> Você sabe se alguém tentou entrar</li>
-                        <li><strong>Tranquilidade:</strong> Muito mais difícil de ser hackeado</li>
-                    </ul>
+                    <h3>📱 Como Ativar:</h3>
+                    <div class="exemplo-golpe">
+                        <p>1. Abra o app do seu banco</p>
+                        <p>2. Procure "Segurança" ou "Configurações"</p>
+                        <p>3. Ative "Autenticação em dois fatores"</p>
+                        <p>4. Escolha receber código por SMS</p>
+                    </div>
                 </div>
 
                 <div class="aula-quiz">
-                    <h3>📝 Mini-teste:</h3>
-                    <p>Com 2FA ativado, um criminoso que descobriu sua senha consegue entrar na conta?</p>
+                    <h3>📝 Teste Rápido:</h3>
+                    <p><strong>Com dupla proteção ativada, se alguém souber sua senha consegue entrar?</strong></p>
                     <div class="mini-opcoes">
-                        <button onclick="respostaMiniTeste(3, 'errado')">Sim, a senha é suficiente</button>
-                        <button onclick="respostaMiniTeste(3, 'certo')">Não, ainda precisa do segundo fator</button>
-                        <button onclick="respostaMiniTeste(3, 'errado')">Depende do horário</button>
+                        <button onclick="respostaMiniTeste(3, 'errado')">Sim, consegue</button>
+                        <button onclick="respostaMiniTeste(3, 'certo')">Não, ainda precisa do código do celular</button>
+                        <button onclick="respostaMiniTeste(3, 'errado')">Depende do banco</button>
                     </div>
                     <div id="resultado-mini-3"></div>
                 </div>
 
                 <div class="aula-footer">
-                    <button class="btn-concluir" onclick="concluirAula(3)">✅ Concluir Aula 3</button>
+                    <button class="btn-concluir" onclick="concluirAula(3)">✅ Entendi! Fazer Quiz</button>
                 </div>
             </div>
         `
     }
 };
 
-// Perguntas do Quiz
+// Quiz Simplificado
 const perguntasQuiz = [
     {
-        pergunta: "Você recebe uma ligação de alguém se passando por seu filho, pedindo PIX urgente. Qual a primeira coisa a fazer?",
+        pergunta: "Alguém liga fingindo ser seu neto pedindo PIX urgente. O que fazer?",
         opcoes: [
-            "Fazer o PIX imediatamente para ajudar",
-            "Pedir mais detalhes sobre a emergência",
-            "Desligar e ligar diretamente para seu filho",
-            "Perguntar o valor necessário"
-        ],
-        correta: 2,
-        explicacao: "Sempre confirme a identidade ligando diretamente para a pessoa. Golpistas criam urgência para impedir verificações."
-    },
-    {
-        pergunta: "Qual destes e-mails é mais suspeito de ser phishing?",
-        opcoes: [
-            "contato@banco-oficial.com.br",
-            "noreply@banco123gmail.com",
-            "atendimento@bancoreal.com.br",
-            "suporte@banco.gov.br"
+            "Fazer o PIX rapidamente",
+            "Desligar e ligar para meu neto",
+            "Pedir mais informações",
+            "Perguntar o valor"
         ],
         correta: 1,
-        explicacao: "E-mails de bancos legítimos têm domínios oficiais. Gmail e outros gratuitos são suspeitos para empresas."
+        explicacao: "SEMPRE confirme ligando para o número que você tem salvo."
     },
     {
-        pergunta: "O que fazer se receber SMS dizendo que seu cartão foi clonado?",
+        pergunta: "Qual e-mail é suspeito?",
         opcoes: [
-            "Clicar no link para verificar",
-            "Responder o SMS com seus dados",
-            "Ignorar e acessar o app oficial do banco",
-            "Repassar para amigos"
+            "contato@bancodobrasil.com.br",
+            "banco123@gmail.com",
+            "atendimento@bradesco.com.br",
+            "suporte@caixa.gov.br"
         ],
-        correta: 2,
-        explicacao: "Nunca clique em links de SMS suspeitos. Sempre acesse o app oficial ou ligue para o banco."
+        correta: 1,
+        explicacao: "Bancos verdadeiros não usam Gmail. Sempre desconfie!"
     },
     {
-        pergunta: "Com autenticação em dois fatores ativada, o que acontece se alguém descobrir sua senha?",
+        pergunta: "SMS: 'Seu cartão foi clonado! Clique aqui'. O que fazer?",
         opcoes: [
-            "A pessoa consegue acessar sua conta normalmente",
-            "A conta é bloqueada automaticamente",
-            "A pessoa ainda precisa do segundo fator para entrar",
-            "Todos os seus dados são apagados"
+            "Clicar no link",
+            "Ignorar e abrir app do banco",
+            "Responder o SMS",
+            "Encaminhar para família"
         ],
-        correta: 2,
-        explicacao: "O 2FA adiciona uma camada extra. Mesmo com a senha, o invasor precisa do segundo fator (SMS, app, etc)."
+        correta: 1,
+        explicacao: "NUNCA clique em links de SMS. Vá direto ao app oficial."
     },
     {
-        pergunta: "Identifique os 3 principais sinais de golpe em uma ligação suspeita:",
+        pergunta: "Com dupla proteção, se descobrirem minha senha conseguem entrar?",
         opcoes: [
-            "Urgência, pedido de dados pessoais, pressão para agir rápido",
-            "Horário da ligação, duração, volume da voz",
-            "Sotaque regional, música de fundo, qualidade da linha",
-            "Número conhecido, conversa longa, histórias detalhadas"
+            "Sim, conseguem",
+            "Não, ainda precisam do código do celular",
+            "Só de madrugada",
+            "Depende do banco"
+        ],
+        correta: 1,
+        explicacao: "A dupla proteção impede entrada mesmo com senha vazada!"
+    },
+    {
+        pergunta: "Principais sinais de golpe:",
+        opcoes: [
+            "Pressa + pedir dinheiro + não deixar pensar",
+            "Ligação de manhã + voz baixa + música",
+            "Número conhecido + conversa longa + detalhes",
+            "Sotaque + barulho + qualidade ruim"
         ],
         correta: 0,
-        explicacao: "Golpistas sempre usam: urgência falsa, solicitam dados/dinheiro, e pressionam para decisões rápidas."
+        explicacao: "Golpistas sempre têm pressa, pedem dinheiro e não deixam você pensar!"
     }
 ];
 
@@ -503,93 +407,149 @@ function desbloquearQuiz() {
     btn.classList.add('btn-quiz-ativo');
 }
 
+let perguntaAtual = 0;
+let respostasQuiz = {};
+
 function iniciarQuiz() {
     const modal = document.getElementById('quizModal');
     const content = document.getElementById('quizContent');
     
-    let quizHTML = '<h2>🧠 Quiz: Identificação de Golpes</h2>';
-    quizHTML += '<p>Responda todas as perguntas para testar seus conhecimentos:</p>';
+    perguntaAtual = 0;
+    respostasQuiz = {};
     
-    perguntasQuiz.forEach((pergunta, index) => {
-        quizHTML += `
-            <div class="quiz-question" id="pergunta-${index}">
-                <h3>Pergunta ${index + 1}:</h3>
-                <p>${pergunta.pergunta}</p>
-                <div class="quiz-options">
-                    ${pergunta.opcoes.map((opcao, i) => `
-                        <div class="quiz-option" onclick="selecionarOpcao(${index}, ${i})">
-                            ${opcao}
-                        </div>
-                    `).join('')}
-                </div>
-                <div class="quiz-feedback" id="feedback-${index}"></div>
+    let quizHTML = `
+        <h2>🧠 Quiz: Teste seus Conhecimentos</h2>
+        <div class="quiz-progresso">
+            <p><strong>Pergunta <span id="numeroAtual">1</span> de ${perguntasQuiz.length}</strong></p>
+            <div class="barra-progresso-quiz">
+                <div class="progresso-quiz" id="progressoQuiz"></div>
             </div>
-        `;
-    });
-    
-    quizHTML += '<button class="btn-quiz" onclick="finalizarQuiz()" id="btnFinalizarQuiz">Finalizar Quiz</button>';
+        </div>
+        <div id="perguntaContainer"></div>
+    `;
     
     content.innerHTML = quizHTML;
     modal.style.display = 'block';
+    
+    mostrarPergunta(0);
 }
 
-let respostasQuiz = {};
+function mostrarPergunta(index) {
+    if (index >= perguntasQuiz.length) {
+        finalizarQuiz();
+        return;
+    }
+    
+    const pergunta = perguntasQuiz[index];
+    const container = document.getElementById('perguntaContainer');
+    
+    const perguntaHTML = `
+        <div class="quiz-question">
+            <p><strong>${pergunta.pergunta}</strong></p>
+            <div class="quiz-options">
+                ${pergunta.opcoes.map((opcao, i) => `
+                    <div class="quiz-option" onclick="selecionarRespostaQuiz(${i})">
+                        ${opcao}
+                    </div>
+                `).join('')}
+            </div>
+            <div class="quiz-navegacao">
+                <button class="btn-quiz-proximo" onclick="proximaPergunta()" id="btnProximo" disabled>
+                    ${index === perguntasQuiz.length - 1 ? 'Finalizar Quiz' : 'Próxima Pergunta'}
+                </button>
+            </div>
+        </div>
+    `;
+    
+    container.innerHTML = perguntaHTML;
+    
+    // Atualizar progresso
+    document.getElementById('numeroAtual').textContent = index + 1;
+    const progresso = ((index + 1) / perguntasQuiz.length) * 100;
+    document.getElementById('progressoQuiz').style.width = progresso + '%';
+}
 
-function selecionarOpcao(perguntaIndex, opcaoIndex) {
+function selecionarRespostaQuiz(opcaoIndex) {
     // Remove seleção anterior
-    const perguntaDiv = document.getElementById(`pergunta-${perguntaIndex}`);
-    perguntaDiv.querySelectorAll('.quiz-option').forEach(opt => {
+    document.querySelectorAll('.quiz-option').forEach(opt => {
         opt.classList.remove('selected');
     });
     
     // Adiciona nova seleção
-    const opcaoSelecionada = perguntaDiv.querySelectorAll('.quiz-option')[opcaoIndex];
+    const opcaoSelecionada = document.querySelectorAll('.quiz-option')[opcaoIndex];
     opcaoSelecionada.classList.add('selected');
     
-    respostasQuiz[perguntaIndex] = opcaoIndex;
+    respostasQuiz[perguntaAtual] = opcaoIndex;
+    
+    // Habilita botão próximo
+    document.getElementById('btnProximo').disabled = false;
+}
+
+function proximaPergunta() {
+    perguntaAtual++;
+    
+    if (perguntaAtual >= perguntasQuiz.length) {
+        finalizarQuiz();
+    } else {
+        mostrarPergunta(perguntaAtual);
+    }
 }
 
 function finalizarQuiz() {
     let pontuacao = 0;
     
+    // Calcular pontuação
     perguntasQuiz.forEach((pergunta, index) => {
-        const perguntaDiv = document.getElementById(`pergunta-${index}`);
-        const opcoes = perguntaDiv.querySelectorAll('.quiz-option');
-        const feedback = document.getElementById(`feedback-${index}`);
-        
-        opcoes.forEach((opcao, i) => {
-            if (i === pergunta.correta) {
-                opcao.classList.add('correct');
-            } else if (respostasQuiz[index] === i) {
-                opcao.classList.add('incorrect');
-            }
-        });
-        
         if (respostasQuiz[index] === pergunta.correta) {
             pontuacao++;
-            feedback.innerHTML = `<div class="resultado acerto">✅ Correto! ${pergunta.explicacao}</div>`;
-        } else {
-            feedback.innerHTML = `<div class="resultado erro">❌ Incorreto. ${pergunta.explicacao}</div>`;
         }
     });
     
+    // Mostrar resultado final
+    const container = document.getElementById('perguntaContainer');
+    
+    let resultadoHTML = `
+        <div class="quiz-resultado">
+            <h3>🏆 Quiz Finalizado!</h3>
+            <div class="pontuacao-final ${pontuacao >= 3 ? 'aprovado' : 'reprovado'}">
+                <p><strong>Sua pontuação: ${pontuacao} de ${perguntasQuiz.length}</strong></p>
+                ${pontuacao >= 3 ? 
+                    '<p>🎉 Parabéns! Você está preparado para se proteger!</p>' :
+                    '<p>📚 Continue estudando as aulas para melhorar sua proteção.</p>'
+                }
+            </div>
+            
+            <div class="revisao-respostas">
+                <h4>📝 Revisão das Respostas:</h4>
+    `;
+    
+    perguntasQuiz.forEach((pergunta, index) => {
+        const acertou = respostasQuiz[index] === pergunta.correta;
+        resultadoHTML += `
+            <div class="resposta-revisao ${acertou ? 'acerto' : 'erro'}">
+                <p><strong>Pergunta ${index + 1}:</strong> ${pergunta.pergunta}</p>
+                <p><strong>Sua resposta:</strong> ${pergunta.opcoes[respostasQuiz[index]]}</p>
+                <p><strong>Resposta correta:</strong> ${pergunta.opcoes[pergunta.correta]}</p>
+                <p><strong>Explicação:</strong> ${pergunta.explicacao}</p>
+            </div>
+        `;
+    });
+    
+    resultadoHTML += `
+            </div>
+            <button class="btn-quiz-finalizar" onclick="fecharQuizModal()">Continuar</button>
+        </div>
+    `;
+    
+    container.innerHTML = resultadoHTML;
+    
+    // Atualizar progresso
     progressoUsuario.quizCompleto = true;
     progressoUsuario.pontuacaoQuiz = pontuacao;
     salvarProgresso();
     
-    const btnFinalizar = document.getElementById('btnFinalizarQuiz');
-    btnFinalizar.textContent = `Quiz Finalizado - ${pontuacao}/${perguntasQuiz.length} pontos`;
-    btnFinalizar.disabled = true;
-    
     if (pontuacao >= 3) {
-        setTimeout(() => {
-            alert(`🎉 Parabéns! Você acertou ${pontuacao} de ${perguntasQuiz.length} perguntas! Simulador desbloqueado!`);
-            desbloquearSimulador();
-        }, 2000);
-    } else {
-        setTimeout(() => {
-            alert(`📚 Você acertou ${pontuacao} de ${perguntasQuiz.length}. Revise as aulas e tente novamente!`);
-        }, 2000);
+        desbloquearSimulador();
     }
     
     atualizarProgressoGeral();
