@@ -20,7 +20,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" data-parallax>
+    <section class="hero" id="hero" data-parallax>
         <div class="hero-background">
             <img src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?w=1920&h=1080&fit=crop" alt="Idosos felizes usando tablet" class="parallax-image" />
         </div>
@@ -50,7 +50,7 @@
     </section>
 
     <!-- Video Section -->
-    <section class="video-section">
+    <section class="video-section" id="video-section">
         <div class="container">
             <h2>Conheça o Programa Vida Digital Segura 50+</h2>
             <p class="video-subtitle">Assista ao vídeo e descubra como transformar sua relação com a tecnologia</p>
@@ -78,7 +78,7 @@
     </section>
 
     <!-- Tech Seniors Gallery -->
-    <section class="seniors-gallery">
+    <section class="seniors-gallery" id="seniors-gallery">
         <div class="container">
             <h2>Transformando Vidas Através da Tecnologia</h2>
             <p class="gallery-subtitle">Conheça alguns dos nossos alunos que já dominam o mundo digital</p>
@@ -136,7 +136,7 @@
     </section>
 
     <!-- Problem Section -->
-    <section class="problem">
+    <section class="problem" id="problem">
         <div class="container">
             <h2>Os Desafios da Era Digital</h2>
             <div class="problem-grid">
@@ -175,7 +175,7 @@
     </section>
 
     <!-- Solution Section -->
-    <section class="solution">
+    <section class="solution" id="solution">
         <div class="container">
             <h2>A Solução que Você Estava Esperando</h2>
             <div class="solution-content">
@@ -210,7 +210,7 @@
     </section>
 
     <!-- Program Details Section with Tabs -->
-    <section class="program-details">
+    <section class="program-details" id="program-details">
         <div class="container">
             <h2>Detalhes do Programa</h2>
             <div class="tabs-container">
@@ -450,7 +450,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials">
+    <section class="testimonials" id="testimonials">
         <div class="container">
             <h2>O Que Dizem Nossos Alunos</h2>
             <div class="testimonial-grid">
@@ -580,6 +580,107 @@
                 }
             });
         }
+    </script>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M18 15l-6-6-6 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <!-- Side Navigation -->
+    <nav class="side-nav" id="sideNav">
+        <ul>
+            <li><a href="#hero" class="nav-dot active" data-title="Início"></a></li>
+            <li><a href="#video-section" class="nav-dot" data-title="Vídeo"></a></li>
+            <li><a href="#seniors-gallery" class="nav-dot" data-title="Histórias"></a></li>
+            <li><a href="#problem" class="nav-dot" data-title="Desafios"></a></li>
+            <li><a href="#solution" class="nav-dot" data-title="Solução"></a></li>
+            <li><a href="#program-details" class="nav-dot" data-title="Programa"></a></li>
+            <li><a href="#testimonials" class="nav-dot" data-title="Depoimentos"></a></li>
+            <li><a href="#inscricao" class="nav-dot" data-title="Inscrição"></a></li>
+        </ul>
+    </nav>
+
+    <script>
+        // Tab System
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.getAttribute('data-tab');
+                
+                // Remove active class from all
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked
+                button.classList.add('active');
+                document.getElementById(targetTab).classList.add('active');
+            });
+        });
+
+        // Accordion System
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                const accordionItem = header.parentElement;
+                const isActive = accordionItem.classList.contains('active');
+                
+                // Close all accordions
+                document.querySelectorAll('.accordion-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked accordion if it wasn't active
+                if (!isActive) {
+                    accordionItem.classList.add('active');
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Side Navigation
+        const sections = document.querySelectorAll('section[id]');
+        const navDots = document.querySelectorAll('.nav-dot');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navDots.forEach(dot => {
+                dot.classList.remove('active');
+                if (dot.getAttribute('href') === `#${current}`) {
+                    dot.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 
