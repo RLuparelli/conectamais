@@ -4,7 +4,7 @@
   "description": "Landing page para o programa de independência digital desenvolvido especialmente para pessoas com mais de 50 anos",
   "main": "public/index.html",
   "scripts": {
-    "build": "mkdir -p public && cp src/conectamais.html public/index.html && cp src/simulados.html public/ && cp -r src/assets public/ && cp src/styles.css public/ && cp src/simulados.css public/ && cp src/simulados.js public/",
+    "build": "mkdir -p public && cp src/conectamais.html public/index.html && cp src/simulados.html public/ && cp -r src/assets public/ && cp src/styles.css public/ && cp src/simulados.css public/ && cp src/simulados.js public/ && cp public/styles-aurora.css public/ 2>/dev/null || true",
     "start": "python3 -m http.server 8000 --directory public || python -m http.server 8000 --directory public || npx serve public",
     "dev": "node server.js",
     "dev:python": "cd public && python3 -m http.server 3000"
