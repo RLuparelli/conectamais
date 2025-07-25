@@ -52,9 +52,9 @@
             <h2>Conheça o Programa Vida Digital Segura 50+</h2>
             <p class="video-subtitle">Assista ao vídeo e descubra como transformar sua relação com a tecnologia</p>
             <div class="video-wrapper">
-                <video controls poster="assets/hero-banner.jpg" class="presentation-video">
+                <video controls poster="assets/hero-banner.jpg" class="presentation-video" preload="metadata" playsinline id="mainVideo">
                     <source src="assets/apresentacao.mp4" type="video/mp4">
-                    Seu navegador não suporta vídeos HTML5.
+                    <p>Seu navegador não suporta vídeos HTML5. <a href="assets/apresentacao.mp4" download>Clique aqui para baixar o vídeo</a>.</p>
                 </video>
             </div>
             <div class="video-benefits">
@@ -383,6 +383,37 @@
                 }, 200);
             });
         });
+
+        // Video debug and fallback
+        const video = document.getElementById('mainVideo');
+        if (video) {
+            video.addEventListener('loadstart', () => {
+                console.log('Vídeo: iniciando carregamento');
+            });
+            
+            video.addEventListener('loadedmetadata', () => {
+                console.log('Vídeo: metadados carregados');
+            });
+            
+            video.addEventListener('canplay', () => {
+                console.log('Vídeo: pronto para reproduzir');
+            });
+            
+            video.addEventListener('error', (e) => {
+                console.error('Erro ao carregar vídeo:', e);
+                const wrapper = document.querySelector('.video-wrapper');
+                if (wrapper) {
+                    wrapper.innerHTML = `
+                        <div style="padding: 40px; text-align: center; background: #f8f9ff; border-radius: 10px;">
+                            <p style="color: #666; margin-bottom: 20px;">O vídeo não pôde ser carregado no momento.</p>
+                            <a href="assets/apresentacao.mp4" download class="cta-button" style="text-decoration: none;">
+                                Baixar Vídeo de Apresentação
+                            </a>
+                        </div>
+                    `;
+                }
+            });
+        }
     </script>
 </body>
 
