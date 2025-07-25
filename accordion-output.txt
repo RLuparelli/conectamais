@@ -1,0 +1,154 @@
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-week="2">
+                                <div class="accordion-left">
+                                    <div class="week-number-small">2</div>
+                                    <div class="accordion-title">WhatsApp Seguro e Eficiente</div>
+                                </div>
+                                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Dominando o WhatsApp com proteção total</p>
+                                <ul class="week-topics">
+                                    <li>Configurações de privacidade</li>
+                                    <li>Identificando mensagens suspeitas</li>
+                                    <li>Grupos familiares organizados</li>
+                                    <li>Videochamadas de qualidade</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-week="3">
+                                <div class="accordion-left">
+                                    <div class="week-number-small">3</div>
+                                    <div class="accordion-title">Banco Digital Blindado</div>
+                                </div>
+                                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Apps bancários com segurança máxima</p>
+                                <ul class="week-topics">
+                                    <li>Instalação e configuração segura</li>
+                                    <li>PIX protegido contra golpes</li>
+                                    <li>Consultas e extratos</li>
+                                    <li>Investimentos pelo celular</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-week="4">
+                                <div class="accordion-left">
+                                    <div class="week-number-small">4</div>
+                                    <div class="accordion-title">Compras Online Inteligentes</div>
+                                </div>
+                                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Comprando online com segurança e economia</p>
+                                <ul class="week-topics">
+                                    <li>Sites confiáveis vs. golpes</li>
+                                    <li>Comparação de preços</li>
+                                    <li>Cupons e promoções legítimas</li>
+                                    <li>Rastreamento de entregas</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-week="5">
+                                <div class="accordion-left">
+                                    <div class="week-number-small">5</div>
+                                    <div class="accordion-title">Aplicativos do Dia a Dia</div>
+                                </div>
+                                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Apps úteis para facilitar sua vida</p>
+                                <ul class="week-topics">
+                                    <li>Uber/99 com segurança</li>
+                                    <li>iFood e delivery</li>
+                                    <li>Previsão do tempo</li>
+                                    <li>Mapas e GPS</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-week="6">
+                                <div class="accordion-left">
+                                    <div class="week-number-small">6</div>
+                                    <div class="accordion-title">Saúde e Bem-Estar Digital</div>
+                                </div>
+                                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Tecnologia a favor da sua saúde</p>
+                                <ul class="week-topics">
+                                    <li>Telemedicina e consultas online</li>
+                                    <li>Farmácias digitais</li>
+                                    <li>Lembretes de medicamentos</li>
+                                    <li>Emergências médicas</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-week="7">
+                                <div class="accordion-left">
+                                    <div class="week-number-small">7</div>
+                                    <div class="accordion-title">Entretenimento e Conexões</div>
+                                </div>
+                                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Se divertindo e conectando com família</p>
+                                <ul class="week-topics">
+                                    <li>Netflix, YouTube e streaming</li>
+                                    <li>Jogos relaxantes</li>
+                                    <li>Redes sociais seguras</li>
+                                    <li>Compartilhamento de memórias</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                            <button class="accordion-header" data-week="8">
+                                <div class="accordion-left">
+                                    <div class="week-number-small">8</div>
+                                    <div class="accordion-title">Autonomia Total e Manutenção</div>
+                                </div>
+                                <svg class="accordion-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                            <div class="accordion-content">
+                                <p>Tornando-se independente digitalmente</p>
+                                <ul class="week-topics">
+                                    <li>Revisão de segurança completa</li>
+                                    <li>Resolução de problemas</li>
+                                    <li>Atualizações e backups</li>
+                                    <li>Plano de manutenção contínua</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
