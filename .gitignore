@@ -47,7 +47,6 @@ jspm_packages/
 .env
 
 # Build outputs
-public/
 dist/
 build/
 
