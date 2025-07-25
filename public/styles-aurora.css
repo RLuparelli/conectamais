@@ -626,96 +626,47 @@ html {
   color: var(--text-primary);
 }
 
-/* Solution Section Layout */
-.solution-hero {
+/* Solution Section */
+.solution-content {
   text-align: center;
-  margin-bottom: 4rem;
-}
-
-.solution-highlight {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
-  background: rgba(0, 212, 255, 0.1);
-  border-radius: 20px;
-  border: 1px solid rgba(0, 212, 255, 0.2);
-  margin-top: 2rem;
 }
 
 .solution-intro {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  margin: 0;
+  margin-bottom: 3rem;
 }
 
-.solution-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
-}
-
-.solution-program h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: var(--aurora-primary);
-}
-
-.solution-program p {
-  font-size: 1.1rem;
+.solution-intro p {
+  font-size: 1.2rem;
   line-height: 1.7;
   margin-bottom: 1.5rem;
 }
 
-.solution-features-grid {
+.solution-features {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
-.feature-card {
-  background: rgba(21, 26, 58, 0.6);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 212, 255, 0.1);
-  border-radius: 16px;
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   padding: 1.5rem;
-  transition: all 0.3s ease;
 }
 
-.feature-card:hover {
-  border-color: rgba(0, 212, 255, 0.3);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
-}
-
-.feature-card .feature-icon {
-  font-size: 2rem;
+.feature-icon {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  display: block;
 }
 
-.feature-card h4 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+.feature span {
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--text-primary);
-}
-
-.feature-card p {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  margin: 0;
-  line-height: 1.5;
-}
-
-@media (max-width: 768px) {
-  .solution-main {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .solution-intro {
-    font-size: 1.2rem;
-  }
 }
 
 .curriculum {
