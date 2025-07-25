@@ -1,4 +1,5 @@
-/* Aurora Theme - Professional Tech Design for 50+ */
+/* Aurora Theme - Professional Tech Design for 50+ 
+   Updated: 2025-07-25 16:55 - Added 3-column problem grid and 4-column solution features */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 /* CSS Variables for Aurora Theme */
@@ -692,9 +693,9 @@ html {
 
 /* Solution Features Grid */
 .solution-features {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 2rem !important;
   margin-top: 3rem;
 }
 
@@ -716,13 +717,13 @@ html {
 
 @media (max-width: 1024px) {
   .solution-features {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 768px) {
   .solution-features {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 }
 
@@ -791,20 +792,20 @@ section {
 }
 
 .problem-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 2rem !important;
 }
 
 @media (max-width: 1024px) {
   .problem-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 @media (max-width: 768px) {
   .problem-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 }
 
