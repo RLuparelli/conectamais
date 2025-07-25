@@ -313,12 +313,12 @@ h2 {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(0, 212, 255, 0.1);
   border-radius: 20px;
-  padding: 3rem;
+  padding: 2rem;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  min-height: 250px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
 }
@@ -649,14 +649,14 @@ html {
 
 .problem-card h3 {
   color: var(--aurora-primary);
-  font-size: 1.75rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .problem-card p {
   color: var(--text-secondary);
-  font-size: 1.125rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .week-title {
@@ -690,6 +690,42 @@ html {
   box-shadow: var(--shadow-glow);
 }
 
+/* Solution Features Grid */
+.solution-features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  background: rgba(21, 26, 58, 0.6);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.feature:hover {
+  background: rgba(21, 26, 58, 0.8);
+  border-color: var(--aurora-primary);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 1024px) {
+  .solution-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .solution-features {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Update Feature Icon */
 .feature-icon {
   width: 50px;
@@ -701,6 +737,7 @@ html {
   justify-content: center;
   margin-right: 20px;
   font-size: 1.5em;
+  flex-shrink: 0;
 }
 
 /* Week Cards Specific Styles */
@@ -753,7 +790,24 @@ section {
   margin-top: 2rem;
 }
 
-.problem-grid,
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .problem-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .problem-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .weeks-grid,
 .arch-grid {
   gap: 3rem;
